@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Components/Header';
+import Home from './Components/Home';
+import Footer from './Components/Footer';
+import About from './Components/About';
+import { Routes, Route } from 'react-router-dom';
+import Product from './Components/Product';
+import CategoriesProducts from './Components/CategoriesProducts';
+import Cart from './Components/Cart';
+import ProductCard from './Components/ProductCard';
+import Contact from './Components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/products" element={<ProductCard />} />
+      <Route path="/products/:id" element={<Product />} />
+      <Route path ="/categories/:name" element={<CategoriesProducts />}/>
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="*" element={<div>Page not found 404</div>}/>
+      </Routes>
+      <Footer />
+    </>
+  )
 }
 
 export default App;
