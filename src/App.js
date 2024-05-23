@@ -14,15 +14,15 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/products" element={<ProductCard />} />
-      <Route path="/products/:id" element={<Product />} />
-      <Route path ="/categories/:name" element={<CategoriesProducts />}/>
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="*" element={<div>Page not found 404</div>}/>
+      <Routes>
+        <Route path="/products" element={<ProductCard />} />
+        <Route path="/products/:id" element={<Product />} />
+        <Route path="/categories/:name" element={<CategoriesProducts />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<div>Page not found 404</div>} />
       </Routes>
       <Footer />
     </>
