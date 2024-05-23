@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import ImageOne from '.././assets/Image-4.jfif';
 import ImageTwo from '.././assets/Image-1.jpg';
 import ImageThree from '.././assets/Image-6.jfif';
@@ -628,12 +629,12 @@ const About = () => {
                   deserunt nihil voluptate ea placeat excepturi voluptatem corrupti maxime totam ratione
                   minima autem nostrum ad, laboriosam temporibus officia.
                 </p>
-                <a
+                <Link
                   href="javascript:void(0)"
                   className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-primary hover:bg-opacity-90"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             </div>
           </div>
