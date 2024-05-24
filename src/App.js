@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
 import About from './Components/About';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Product from './Components/Product';
 import CategoriesProducts from './Components/CategoriesProducts';
 import Cart from './Components/Cart';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<Home />}/>
+          <Route path="*" element={<div className="flex-row p-12 justify-center items-center text-2xl">Sorry! Page not found</div>}/>
         </Routes>
       <Footer />
     </>
